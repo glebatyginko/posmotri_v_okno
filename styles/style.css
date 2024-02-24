@@ -36,3 +36,155 @@ ul,
 ol {
   list-style: none;
 }
+
+.page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between; 
+  align-items: flex-end;
+  max-inline-size: 1140px; 
+  gap: 30px;
+}
+
+/* RESULT */
+.result__video-container {
+  position: relative;
+  inline-size: 711px; 
+  block-size: auto;
+  margin-block-end: 16px;
+}
+
+.result__video {
+  inline-size: 100%;
+  block-size: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+
+/* SEARCH-FORM */
+.search-form {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start; 
+}
+
+.search-form__fieldset-title {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 22px;
+}
+
+/* CONTENT-DETAILS */
+.content__details {
+  inline-size: 100%;
+  block-size: 100%;
+}
+
+.title {
+  font-family: 'Oswald', sans-serif; 
+  font-weight: 700; 
+  font-size: 75px; 
+  line-height: 70.5px;  
+  text-transform: uppercase;
+}
+
+.content__accent {
+  color: rgb(84, 80, 80);
+}
+
+.content__list {
+  position: relative;
+  max-block-size: 298px;
+  overflow-y: scroll;
+  margin-block-start: 26px;
+}
+
+/* ТЕМПЛЕЙТЫ */
+/* CARDS-LIST-ITEM-TEMPLATE */
+.content__list-item:not(:last-of-type) {
+  margin-block-end: 30px; 
+}
+
+.content__card-link {
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+}
+
+.content__video-card {
+  display: flex;
+  align-items: flex-start;
+}
+
+.content__video-card-title {
+  font-family: 'Oswald', sans-serif;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 30px;
+  text-transform: uppercase;
+}
+
+.content__video-card-description {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 16px;
+}
+
+.content__video-card-thumbnail {
+  inline-size: 194px;
+  block-size: 103px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.content__video-card-description-container {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  flex-grow: 1;
+}
+
+/* PRELOADER-TEMPLATE */
+.preloader-template {
+  position: absolute;
+  inset: 0;
+}
+
+
+
+/* VISUALLY-HIDDEN */
+
+.visually-hidden {
+  position: absolute;
+  inline-size: 1px;
+  block-size: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
