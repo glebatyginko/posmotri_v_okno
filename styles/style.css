@@ -139,7 +139,6 @@ ol {
 }
 
 /* CURSOR-POINTER */
-.search-form__textfield,
 .search-form__label {
   cursor: pointer; 
 }
