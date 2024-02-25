@@ -67,7 +67,6 @@ ol {
   object-position: center;
 }
 
-
 /* SEARCH-FORM */
 .search-form {
   display: flex;
@@ -95,7 +94,7 @@ ol {
 
 .search-form__checkbox-list > .search-form__label { 
   display: flex;
-  width: fit-content;
+  inline-size: fit-content;
   align-items: center;
   gap: 5px;
 }
@@ -104,10 +103,10 @@ ol {
   appearance: none;
   inline-size: 225px;
   block-size: 27px;
-  border-top: 1px solid rgba(255, 255, 255, 1); 
-  border-bottom: 1px solid rgba(255, 255, 255, 1); 
-  border-left: none; 
-  border-right: none; 
+  border-block-start: 1px solid rgba(255, 255, 255, 1); 
+  border-block-end: 1px solid rgba(255, 255, 255, 1); 
+  border-inline-start: none; 
+  border-inline-end: none; 
   background-color: inherit;
   color: rgba(255, 255, 255, 0.7);
   font-family: inherit;
@@ -119,11 +118,12 @@ ol {
   outline: none;
 }
 
-
 .search-form__pseudo-checkbox {
-  display: inline-block; 
-  width: 19px;
-  height: 19px;
+  display: flex; 
+  justify-content: center;
+  align-items: center;
+  inline-size: 19px;
+  block-size: 19px;
   border: 1px solid #FFFFFF;
 }
 
@@ -138,12 +138,9 @@ ol {
   vertical-align: middle;
 }
 
-
- 
-  
 /* CURSOR-POINTER */
 .search-form__textfield,
-.button {
+.search-form__label {
   cursor: pointer; 
 }
 
@@ -168,7 +165,7 @@ ol {
 .content__list {
   position: relative;
   max-block-size: 298px;
-  overflow-y: scroll;
+  overflow-y: auto;
   margin-block-start: 26px;
 }
 
@@ -184,6 +181,23 @@ ol {
   color: #FFFFFF;
 }
 
+.button:hover {
+ cursor: pointer;
+}
+
+.button:active {
+  background-color: rgba(84, 80, 80, 1);
+}
+
+.button:focus {
+  outline: none; 
+}
+
+.button:focus-visible {
+  outline: 1px solid #FFFFFF;
+  outline-offset: 1px;
+}
+
 .search-form__submit-button {
   align-self: flex-end;
   inline-size: 194px;
@@ -195,7 +209,6 @@ ol {
   block-size: 34px;
 }
 
-
 /* ТЕМПЛЕЙТЫ */
 /* CARDS-LIST-ITEM-TEMPLATE */
 .content__list-item:not(:last-of-type) {
@@ -203,8 +216,14 @@ ol {
 }
 
 .content__card-link {
+  display: block;
   text-decoration: none;
   color: rgb(255, 255, 255);
+  margin: 2px;
+}
+
+.content__card-link_current {
+  background-color: rgba(84, 80, 80, 1);
 }
 
 .content__video-card {
@@ -269,7 +288,25 @@ ol {
   background-color: #FFFFFF;
 }
 
+.search-form__label:hover {
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
 
+.content__list-item:hover {
+  cursor: pointer;
+}
+
+/* .cards-list-item-template:active {}  */
+
+.content__card-link:focus {
+  outline: none;
+}
+
+.content__card-link:focus-visible {
+  outline: 1px solid #FFFFFF;
+  outline-offset: 1px;
+}
 
 /* VISUALLY-HIDDEN */
 .visually-hidden {
