@@ -48,7 +48,7 @@ ol {
   flex-direction: row;
   justify-content: space-between; 
   align-items: flex-end;
-  max-inline-size: 1140px; 
+  min-inline-size: 1140px; 
   gap: 30px;
 }
 
@@ -102,7 +102,7 @@ ol {
 .search-form__textfield {
   appearance: none;
   inline-size: 225px;
-  block-size: 27px;
+  min-block-size: 27px;
   border-block-start: 1px solid rgba(255, 255, 255, 1); 
   border-block-end: 1px solid rgba(255, 255, 255, 1); 
   border-inline-start: none; 
@@ -146,7 +146,7 @@ ol {
 /* CONTENT-DETAILS */
 .content__details {
   inline-size: 100%;
-  block-size: 100%;
+  min-block-size: 534px;
 }
 
 .title {
@@ -172,6 +172,7 @@ ol {
 .button {
   border: 1px solid #FFFFFF;
   background-color: inherit;
+  font-family: 'Fira Sans Condensed', sans-serif;
   font-size: 18px;
   font-weight: 700;
   line-height: 22px;
@@ -182,6 +183,8 @@ ol {
 
 .button:hover {
  cursor: pointer;
+ text-decoration: underline;
+ text-underline-offset: 2px;
 }
 
 .button:active {
@@ -200,12 +203,14 @@ ol {
 .search-form__submit-button {
   align-self: flex-end;
   inline-size: 194px;
-  block-size: 34px;
+  min-block-size: 32px;
+  margin-block-end: 2px;
 }
 
 .more-button {
   inline-size: 399px;
-  block-size: 34px;
+  min-block-size: 32px;
+  margin: 0 2px 2px 2px;
 }
 
 /* ТЕМПЛЕЙТЫ */
@@ -260,13 +265,6 @@ ol {
   gap: 6px;
   flex-grow: 1;
   flex-basis: 0;
-  overflow: hidden;
-}
-
-/* PRELOADER-TEMPLATE */
-.preloader-template {
-  position: absolute;
-  inset: 0;
 }
 
 /* Состояния элементов формы и кнопок */
@@ -275,8 +273,7 @@ ol {
 }
 
 .search-form__label:has(:focus-visible) {
-  outline: 1px	solid
-  #FFFFFF;
+  outline: 1px solid #FFFFFF;
   outline-offset: 1px;
 }
 
@@ -292,10 +289,6 @@ ol {
   text-underline-offset: 2px;
 }
 
-.content__list-item:hover {
-  cursor: pointer;
-}
-
 /* .cards-list-item-template:active {}  */
 
 .content__card-link:focus {
@@ -305,6 +298,10 @@ ol {
 .content__card-link:focus-visible {
   outline: 1px solid #FFFFFF;
   outline-offset: 1px;
+}
+
+.content__card-link:hover {
+  cursor: pointer;
 }
 
 /* VISUALLY-HIDDEN */
@@ -317,21 +314,3 @@ ol {
   clip-path: inset(50%);
   white-space: nowrap;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
