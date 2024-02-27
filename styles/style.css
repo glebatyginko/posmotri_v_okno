@@ -9,7 +9,7 @@ html {
 }
 
 .page {
-  inline-size: 1200px;
+  max-inline-size: 1200px;
   block-size: 100%;
   margin: auto;
   color: #fff;
@@ -48,11 +48,15 @@ ol {
   flex-direction: row;
   justify-content: space-between; 
   align-items: flex-end;
-  min-inline-size: 1140px; 
   gap: 30px;
 }
 
 /* RESULT */
+.result {
+  min-inline-size: 711px;
+  block-size: 100%;
+}
+
 .result__video-container {
   position: relative;
   inline-size: 711px; 
@@ -145,7 +149,7 @@ ol {
 
 /* CONTENT-DETAILS */
 .content__details {
-  inline-size: 100%;
+  min-inline-size: 399px;
   min-block-size: 534px;
 }
 
@@ -165,7 +169,7 @@ ol {
   position: relative;
   max-block-size: 298px;
   overflow-y: auto;
-  margin-block-start: 26px;
+  margin-block-start: 25px;
 }
 
 /* BUTTONS */
@@ -189,6 +193,7 @@ ol {
 
 .button:active {
   background-color: rgba(84, 80, 80, 1);
+  text-decoration: none;
 }
 
 .button:focus {
@@ -208,7 +213,7 @@ ol {
 }
 
 .more-button {
-  inline-size: 399px;
+  inline-size: 395px;
   min-block-size: 32px;
   margin: 0 2px 2px 2px;
 }
@@ -289,8 +294,6 @@ ol {
   text-underline-offset: 2px;
 }
 
-/* .cards-list-item-template:active {}  */
-
 .content__card-link:focus {
   outline: none;
 }
@@ -302,6 +305,12 @@ ol {
 
 .content__card-link:hover {
   cursor: pointer;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.content__card-link:active {
+  text-decoration: none;
 }
 
 /* VISUALLY-HIDDEN */
