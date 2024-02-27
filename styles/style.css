@@ -16,6 +16,9 @@ html {
   font-family: 'Fira Sans Condensed', sans-serif;
   font-size: 18px;
   background-color: #1b1919;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 h1,
@@ -37,18 +40,13 @@ ol {
   list-style: none;
 }
 
-.page {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 .content {
   display: flex;
   flex-direction: row;
   justify-content: space-between; 
   align-items: flex-end;
   gap: 30px;
+  inline-size: 1140px;
 }
 
 /* RESULT */
@@ -323,3 +321,5 @@ ol {
   clip-path: inset(50%);
   white-space: nowrap;
 }
+
+/* Тут целая история с инлайн сайзом... Я все подогнал, раз 10 перезапустил лайв-сервер, перезагружал вс код, открывал полноэкранный режим, открывал в 3х браузерах проект,  ребутил компьютер, у меня четко отцентрировано и четко 1140 на 534.Пиксель перфект отличается на пиксель максимум. Запушил на гитхаб. Мой товарищ посмотрел и сказал, что сразу как скачал и запустил проект вылетела ширина 1157 */
