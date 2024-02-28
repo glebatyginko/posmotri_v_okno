@@ -219,7 +219,7 @@ ol {
 /* ТЕМПЛЕЙТЫ */
 /* CARDS-LIST-ITEM-TEMPLATE */
 .content__list-item:not(:last-of-type) {
-  margin-block-end: 30px; 
+  padding-block-end: 30px; 
 }
 
 .content__card-link {
@@ -245,6 +245,7 @@ ol {
   line-height: 30px;
   text-transform: uppercase;
   overflow: hidden;
+  white-space: nowrap;
   text-overflow: ellipsis;
 }
 
@@ -268,6 +269,7 @@ ol {
   gap: 6px;
   flex-grow: 1;
   flex-basis: 0;
+  text-overflow: ellipsis;
 }
 
 /* Состояния элементов формы и кнопок */
@@ -309,6 +311,7 @@ ol {
 
 .content__card-link:active {
   text-decoration: none;
+  background-color: rgba(84, 80, 80, 1);
 }
 
 /* VISUALLY-HIDDEN */
@@ -321,5 +324,3 @@ ol {
   clip-path: inset(50%);
   white-space: nowrap;
 }
-
-/* Тут целая история с инлайн сайзом... Я все подогнал, раз 10 перезапустил лайв-сервер, перезагружал вс код, открывал полноэкранный режим, открывал в 3х браузерах проект,  ребутил компьютер, у меня четко отцентрировано и четко 1140 на 534.Пиксель перфект отличается на пиксель максимум. Запушил на гитхаб. Мой товарищ посмотрел и сказал, что сразу как скачал и запустил проект вылетела ширина 1157 */
