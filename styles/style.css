@@ -205,15 +205,13 @@ ol {
 
 .search-form__submit-button {
   align-self: flex-end;
-  inline-size: 194px;
-  min-block-size: 32px;
-  margin-block-end: 2px;
+  min-inline-size: 194px;
+  min-block-size: 34px;
 }
 
 .more-button {
-  inline-size: 395px;
-  min-block-size: 32px;
-  margin: 0 2px 2px 2px;
+  inline-size: 100%;
+  min-block-size: 34px;
 }
 
 /* ТЕМПЛЕЙТЫ */
@@ -304,7 +302,7 @@ ol {
 .content__card-link:hover {
   cursor: pointer;
   text-decoration: underline;
-  text-underline-offset: 2px;
+  text-underline-offset: 1px;
 }
 
 .content__card-link:active {
