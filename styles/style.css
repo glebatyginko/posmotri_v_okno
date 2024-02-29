@@ -238,7 +238,14 @@ ol {
   align-items: flex-start;
 }
 
+.content__video-card-description-container {
+  flex-grow: 1;
+  flex-basis: 0;
+  overflow: hidden;
+}
+
 .content__video-card-title {
+  margin-block-end: 6px;
   font-family: 'Oswald', sans-serif;
   font-size: 30px;
   font-weight: 700;
@@ -261,15 +268,6 @@ ol {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-}
-
-.content__video-card-description-container {
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-  flex-grow: 1;
-  flex-basis: 0;
-  text-overflow: ellipsis;
 }
 
 /* Состояния элементов формы и кнопок */
